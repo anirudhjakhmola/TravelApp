@@ -16,7 +16,7 @@ const SearchCard = ({item, index}) => {
     <Animated.View
       entering={FadeInDown.delay(index < 6 ? index * 80 : 0)}
       style={{
-        paddingTop: index === 1 ? spacing.l : 0,
+        paddingTop: index === 1 ? spacing.l : 0, //remove padding
         paddingLeft: !even ? spacing.l / 2 : 0,
         paddingRight: even ? spacing.l / 2 : 0,
         paddingBottom: spacing.l,
@@ -29,7 +29,7 @@ const SearchCard = ({item, index}) => {
         }}
         style={{
           width: '100%',
-          height: index % 3 === 0 ? 180 : 240,
+          height: index % 3 === 0 ? 180 : 240, //if you want same heigth just remove index and give static
         }}>
         <CardFavoriteIcon onPress={() => {}} />
         <SharedElement id={`trip.${item.id}.image`} style={styles.media}>
