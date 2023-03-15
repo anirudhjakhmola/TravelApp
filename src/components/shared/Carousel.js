@@ -1,5 +1,6 @@
 import React from 'react';
-import {FlatList, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {FlatList} from 'react-native-gesture-handler';
 import {sizes, spacing} from '../../constants/theme';
 
 const CARD_WIDTH = sizes.width - 80;

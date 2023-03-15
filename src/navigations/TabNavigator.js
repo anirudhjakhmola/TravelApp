@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import FavoriteScreen from '../screens/FavoriteScreen';
 import Icon from '../components/shared/Icon';
 import {colors, sizes} from '../constants/theme';
-import {StyleSheet, Animated} from 'react-native';
+import {StyleSheet, Animated, Platform} from 'react-native';
 import HomeNavigator from './HomeNavigator';
 import SearchNavigator from './SearchNavigator';
 
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     width: 10,
     height: 2,
     left: sizes.width / tabs.length / 2 - 5,
-    bottom: 30,
+    bottom: Platform.OS === 'ios' ? 30 : 5,
     backgroundColor: colors.primary,
     zIndex: 100,
   },
